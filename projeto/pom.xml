@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>br.com.projeto</groupId>
+	<artifactId>projeto</artifactId>
+	<version>0.0.0.1</version>
+	<packaging>pom</packaging>
+	<name>Projeto</name>
+
+	<properties>
+		<junit.version>4.12</junit.version>
+		<javaee-api.version>8.0</javaee-api.version>
+		<source.version>1.8</source.version>
+		<ejb.version>3.1</ejb.version>
+		<version.wildfly-swarm>2018.3.3</version.wildfly-swarm>
+
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>8.0</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>${project.artifactId}</finalName>
+
+		<resources>
+			<resource>
+				<directory>${project.basedir}/src/main/resources</directory>
+			</resource>
+			<resource>
+				<directory>${project.basedir}/src/main/propriedades</directory>
+				<filtering>false</filtering>
+			</resource>
+			<resource>
+				<directory>${project.basedir}/src/main/relatorios</directory>
+				<filtering>true</filtering>
+				<excludes>
+					<exclude>**/*.jrxml</exclude>
+				</excludes>
+			</resource>
+		</resources>
+
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.wildfly.plugins</groupId>
+					<artifactId>wildfly-maven-plugin</artifactId>
+					<version>1.2.0.Final</version>
+					<configuration>
+						<hostname>${wildfly.hostname}</hostname>
+						<port>${wildfly.port}</port>
+						<username>${wildfly.username}</username>
+						<password>${wildfly.password}</password>
+						<jboss-home>${wildfly.dir}</jboss-home>
+					</configuration>
+					<executions>
+						<execution>
+							<id>undeploy</id>
+							<phase>clean</phase>
+							<goals>
+								<goal>undeploy</goal>
+							</goals>
+							<configuration>
+								<ignoreMissingDeployment>true</ignoreMissingDeployment>
+							</configuration>
+						</execution>
+						<execution>
+							<id>deploy</id>
+							<phase>install</phase>
+							<goals>
+								<goal>deploy</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+	<modules>
+		<module>projeto-ejb</module>
+		 <module>projeto-ear</module>
+		<module>projeto-web</module>
+		<module>projeto-entidade</module>
+	</modules>
+	
+</project>
