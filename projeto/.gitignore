@@ -1,13 +1,4 @@
-# Created by https://www.gitignore.io/api/flex,java,eclipse,flexbuilder
-
-
-*.svn
-target/
-**/target
-persistence.xml
-
 ### Eclipse ###
-
 .metadata
 bin/
 tmp/
@@ -19,10 +10,6 @@ local.properties
 .settings/
 .loadpath
 .recommenders
-/.apt_generated/
-**/.apt_generated
-/.apt_generated_tests/
-**/.apt_generated_tests
 
 # External tool builders
 .externalToolBuilders/
@@ -35,6 +22,9 @@ local.properties
 
 # CDT-specific (C/C++ Development Tooling)
 .cproject
+
+# CDT- autotools
+.autotools
 
 # Java annotation processor (APT)
 .factorypath
@@ -57,40 +47,21 @@ local.properties
 # Code Recommenders
 .recommenders/
 
+# Annotation Processing
+.apt_generated/
+.apt_generated_test/
+
 # Scala IDE specific (Scala & Java development for Eclipse)
 .cache-main
 .scala_dependencies
 .worksheet
 
+# Uncomment this line if you wish to ignore the project description file.
+# Typically, this file would be tracked if it contains build/dependency configurations:
+#.project
+
 ### Eclipse Patch ###
-# Eclipse Core
-.project
+# Spring Boot Tooling
+.sts4-cache/
 
-# JDT-specific (Eclipse Java Development Tools)
-.classpath
-
-
-### Java ###
-# Compiled class file
-*.class
-
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.war
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-
-# End of https://www.gitignore.io/api/flex,java,eclipse,flexbuilder
+# End of https://www.toptal.com/developers/gitignore/api/eclipse
