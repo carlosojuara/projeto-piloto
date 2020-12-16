@@ -1,7 +1,0 @@
-target/
-**/target
- */target/*
- 
-.project
-.classpath
-factoryConfiguration.json
