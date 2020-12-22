@@ -5,3 +5,7 @@ target/
 .project
 .classpath
 factoryConfiguration.json
+
+/src/main/node_modules
+src/main/node_modules
+*/src/main/node_modules/*
