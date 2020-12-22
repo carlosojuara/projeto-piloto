@@ -11,6 +11,8 @@ main {
 	height: 100vh;
 	position: relative;
 	background-color: #F5F5DC;
+	background: url('../img/farm.png') no-repeat center;
+	background-size: cover;
 }
 
 .container_login {
@@ -24,6 +26,7 @@ main {
 	-webkit-box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.77);
 	-moz-box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.77);
 	box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.77);
+	opacity: 0.9;
 }
 
 .container h3 {
