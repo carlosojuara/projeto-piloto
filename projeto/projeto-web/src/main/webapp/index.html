@@ -2,16 +2,38 @@
 <html lang="pt-br">
 	<head>
 		<meta charset="UTF-8">
-		<title>Barbearia Alura</title>
-
-		<link rel="stylesheet" href="./css/style.css"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>CM-</title>
+		<link rel="stylesheet" href="./css/reset.css" media="screen"/>
+		<link rel="stylesheet" href="./css/style.css" media="screen"/>
 	</head>
-<body>
+<body onload="init()">
+	<div class="container">
+		<div class="container_login">
+			<h3>Fazenda Beira Rio</h3>
+			<form id="formLogin">
+				<div class="grupo_div">
+					<label for="nome" class="label_nome">Nome:</label>
+					<input class="tamanho" type="text" name="nome" id="nome" required autofocus >
+				</div>
+				<div class="grupo_div espaco_topo">
+					<label for="senha">Senha:</label>
+					<input class="tamanho" type="password" name="senha" id="senha" required>
+				</div>
+				<div class="div_submeter espaco_topo ">
+					<input type="submit" name="Enviar" id="enviar" value="Enviar" >
+					<a id="recuperar_senha" href="">Recuperar senha?</a>
+				</div>
+			</form>
+		</div>
+	</div>
 
-	<h1>Sobre a Barbearia Alura</h1>
-	<p>Localizada no coração da cidade, a <strong>Barbearia Alura</strong> traz para o mercado o que há de melhor para o seu cabelo e barba. Fundada em 2019, já se tornou destaque na região e conquista novos clientes a cada dia.</p>
-	<p><em>Nossa missão é: <strong>"Proporcionar auto-estima e qualidade de vida aos clientes"</strong>.</em></p>
-	<p>Oferecemos profissionais experientes e antenados às mudanças no mundo da moda. O atendimento possui padrão de excelência e agilidade, garantindo qualidade e satisfação dos nossos clientes.</p>
+	<script>
+		function init(){
+			document.getElementById('formLogin').reset();
+		};
+	
+	</script>
 
 </body>
 
