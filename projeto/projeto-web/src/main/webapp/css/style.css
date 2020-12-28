@@ -11,6 +11,7 @@ main {
 	height: 100vh;
 	position: relative;
 	background: linear-gradient(#FEFEFE 50%,#90ee90);
+	box-shadow: inset 0 0 30px #90ee90;
 	/*background: url('../img/principal-senepol.jpg') no-repeat center;
 	background-size: cover; */
 }
@@ -26,7 +27,6 @@ main {
 	-webkit-box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.77);
 	-moz-box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.77);
 	box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.77);
-	opacity: 0.9;
 	box-sizing : border-box;
 	border: 2px solid #8B4513;
 	border-radius: 10px;
@@ -37,6 +37,7 @@ main {
 	font-weight: bold;
 	text-align: left;
 	color: #8B4513;
+	box-shadow: 5px 10px  #8B4513;
 	/*font-family: 'Special Elite', courier,arial,helvetica;*/
 }
 
@@ -78,20 +79,20 @@ form {
 
 .div_submeter input {
 	font-size: 15px;
-	color: #8B4513;
+	color: #FFFFFF;
 	border: none;
   	border: 2px solid #8B4513;
   	border-radius: 4px;
-  	background-color: #BDB76B;
+	background-color: #8B4513;
   	font-weight: bold;
 	height: 25px;
 }
 
 .div_submeter input:hover {
 	font-size: 15px;
-	background-color: #8B4513;
+	background-color: #BDB76B;
 	cursor: pointer;
-	color: #FFFFFF;
+	color: #8B4513;
 	
 }
 
@@ -107,5 +108,18 @@ form {
 }
 
 .div_submeter a:hover{
+	color: #BDB76B;
 	text-decoration: underline;
+}
+
+@media screen and ( max-width: 480px) {
+	.container_login{
+		width: 85%;
+	}
+	
+	.container h3 {
+		font-size: 30px;
+		box-shadow: 5px 10px  #8B4513;
+	}
+	
 }
