@@ -10,7 +10,7 @@ main {
 .container {
 	height: 100vh;
 	position: relative;
-	background: linear-gradient(#FEFEFE 50%,#90ee90);
+	background: linear-gradient(#FEFEFE 50%,#10ee90);
 	box-shadow: inset 0 0 30px #90ee90;
 	/*background: url('../img/principal-senepol.jpg') no-repeat center;
 	background-size: cover; */
@@ -28,7 +28,7 @@ main {
 	-moz-box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.77);
 	box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.77);
 	box-sizing : border-box;
-	border: 2px solid #8B4513;
+	border: 1px solid #8B4513;
 	border-radius: 10px;
 }
 
@@ -37,7 +37,7 @@ main {
 	font-weight: bold;
 	text-align: left;
 	color: #8B4513;
-	box-shadow: 5px 10px  #8B4513;
+	box-shadow: 5px 5px 1px 1px #8B4513;
 	/*font-family: 'Special Elite', courier,arial,helvetica;*/
 }
 
@@ -58,7 +58,7 @@ form {
 	height: 25px;
 	font-size: 19px;
 	border: none;
-  	border-bottom: 2px solid #8B4513;
+  	border-bottom: 1px solid #8B4513;
   	border-radius: 4px;
   	background-color: #FEFEFE;
   	outline:none;
@@ -81,7 +81,7 @@ form {
 	font-size: 15px;
 	color: #FFFFFF;
 	border: none;
-  	border: 2px solid #8B4513;
+  	border: 1px solid #8B4513;
   	border-radius: 4px;
 	background-color: #8B4513;
   	font-weight: bold;
