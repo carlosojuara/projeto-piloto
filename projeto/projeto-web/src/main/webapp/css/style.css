@@ -21,7 +21,7 @@ main {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	width: 350px;
+	width: 250px;
 	padding: 20px;
 	background-color: #FEFEFE;
 	-webkit-box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.77);
